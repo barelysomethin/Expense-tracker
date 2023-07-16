@@ -6,7 +6,7 @@ const app=express()
 app.use(bodyParser.json())
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
-mongoose.connect('mongodb+srv://money:hPLa7xeCu8uwNL1r@cluster0.wt4eymu.mongodb.net/new',{useNewUrlParser:true,
+mongoose.connect('your mongodb connection string',{useNewUrlParser:true,
 useUnifiedTopology:true});
 var db=mongoose.connection;
 db.on('error',()=>console.log("error in connection"));
